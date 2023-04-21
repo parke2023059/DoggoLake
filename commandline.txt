@@ -1,0 +1,35 @@
+Basic Terminal Commands
+
+
+-cd
+cd changes your directory. This takes a argument
+
+EX: cd Documents/DoggoLake
+
+cd .. goes back a directory
+EX2: cd ..
+
+
+
+-touch
+touch creates a file. This takes one argument.you must add the file extension to the end of the name.
+
+EX: touch test.txt
+EX2: touch app.py
+
+
+
+-rm
+rm removes a file/directory. this takes one argument. this argument can be a *, this will remove everything in that directory. 
+
+EX: rm app.py
+EX2: rm DoggoLake/
+EX3: rm *
+
+
+-mv
+mv is used to move files. this can also be used to rename files. mv takes two arguments
+
+EX: mv Documents/app.py Documents/test.py
+EX2: mv Documents/app.py Videos/app.py
+
