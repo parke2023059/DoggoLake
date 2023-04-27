@@ -33,3 +33,16 @@ mv is used to move files. this can also be used to rename files. mv takes two ar
 EX: mv Documents/app.py Documents/test.py
 EX2: mv Documents/app.py Videos/app.py
 
+-nono
+text editor
+ -ctrl s/z
+
+-python3
+run python
+
+-pip3 
+download python module
+
+-mkdir/rmdir
+make/remove directory
+
