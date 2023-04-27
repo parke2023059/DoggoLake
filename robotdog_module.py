@@ -1,5 +1,16 @@
 import cv2
-  
+import openai
+import pyttsx3
+import gtts
+
+
+from playsound import playsound
+
+import os
+
+
+
+
 
 
 class RobotDog:
@@ -19,4 +30,30 @@ class RobotDog:
 
     
 
+    def askQuestion():
+        engine = pyttsx3.init()
+
+        openai.api_key = "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"
+        question = input("What is your question?")
+        response = openai.ChatCompletion.create(
+        model='gpt-3.5-turbo' ,
+        messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": question},
+        ])
+
+        message = response.choices[0]['message']
+        print(message['content'])
+        engine.say(message)
+        engine.runAndWait()
+
+
+    def test():
+        tts = gtts.gTTS("Hola Mundo", lang="en")
+        tts.save("hola.mp3")
+        playsound("hola.mp3")
+
+
 #RobotDog.startRecording()
+#RobotDog.askQuestion()
+RobotDog.test()
