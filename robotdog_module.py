@@ -1,19 +1,33 @@
 import cv2
 import openai
 import pyttsx3
-import gtts
+#import gtts
 import os
 import json
 import requests
+import time
+
+from pygame import mixer
 
 
-
-
-
+mixer.init()
 
 
 
 class RobotDog:
+
+    def test():
+        dir = os.getcwd()
+
+        print(dir)
+        mixer.music.set_volume(0.2)
+        mixer.music.load(dir + "/bleach.mp3")
+        mixer.music.play()
+
+
+
+        time.sleep(60)
+
 
     def startRecording():
         vid = cv2.VideoCapture(0)
@@ -48,8 +62,8 @@ class RobotDog:
         engine.runAndWait()
 
 
-    def test():
-        openai.api_key = "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"
+    def askQuestion2():
+        openai.api_key = "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"
         question = input("wuz ur question?")
         response = openai.ChatCompletion.create( model='gpt-3.5-turbo', messages=[ {"role": "system", "content": "Your are a helpful assistant."}, {"role": "user", "content": question}, ])
         message = response.choices[0]['message']
@@ -64,11 +78,36 @@ class RobotDog:
         response = requests.get(url, headers=headers)
         print(response.text)
 
+
+
         print("The URL is: " + url)
-        #print(url + '/audio.wav')
-        link = requests.get(url + '/audio.wav')
-        open('audio.wav', 'wb').write(link)
+
+        
+
+        link = requests.get(url, allow_redirects=True)
+
+        
+
+        while json.loads(link.content)["path"] == 'None':
+            print("File not ready. Waiting...")
+            print(thePath)
+            time.sleep(3)
+
+
+        thePath = json.loads(link.content)["path"]
+        
+        
+
+
+        #download the content
+
+
+
+
+
+
 
 #RobotDog.startRecording()
 #RobotDog.askQuestion()
-RobotDog.test()
+RobotDog.askQuestion2()
+#RobotDog.test()
