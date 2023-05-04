@@ -2,12 +2,21 @@ import cv2
 import openai
 import pyttsx3
 #import gtts
-import os
+
 import json
 import requests
 import time
+import dotenv,os
+
+
 
 from pygame import mixer
+
+
+
+dotenv.main.load_dotenv()
+
+
 
 
 mixer.init()
@@ -63,7 +72,7 @@ class RobotDog:
 
 
     def askQuestion2():
-        openai.api_key = "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"
+        openai.api_key = os.getenv('apiKey')
         question = input("wuz ur question?")
         response = openai.ChatCompletion.create( model='gpt-3.5-turbo', messages=[ {"role": "system", "content": "Your are a helpful assistant."}, {"role": "user", "content": question}, ])
         message = response.choices[0]['message']
@@ -95,7 +104,7 @@ class RobotDog:
 
 
         thePath = json.loads(link.content)["path"]
-        
+
         
 
 
