@@ -2,39 +2,29 @@ import cv2
 import openai
 import pyttsx3
 #import gtts
-
 import json
 import requests
 import time
 import dotenv,os
-
-
 
 from pygame import mixer
 
 
 
 dotenv.main.load_dotenv()
-
-
-
-
 mixer.init()
 
 
 
 class RobotDog:
 
-    def test():
+    def play_audio():
         dir = os.getcwd()
 
         print(dir)
         mixer.music.set_volume(0.2)
-        mixer.music.load(dir + "/bleach.mp3")
+        mixer.music.load(dir + "/africa.mp3")
         mixer.music.play()
-
-
-
         time.sleep(60)
 
 
@@ -118,5 +108,5 @@ class RobotDog:
 
 #RobotDog.startRecording()
 #RobotDog.askQuestion()
-RobotDog.askQuestion2()
-#RobotDog.test()
+#RobotDog.askQuestion2()
+RobotDog.play_audio()
