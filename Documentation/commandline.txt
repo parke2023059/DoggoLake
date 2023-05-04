@@ -27,6 +27,10 @@ EX2: rm DoggoLake/
 EX3: rm *
 
 
+-rm -rf
+removes non empty folders
+
+
 -mv
 mv is used to move files. this can also be used to rename files. mv takes two arguments
 
@@ -45,4 +49,12 @@ download python module
 
 -mkdir/rmdir
 make/remove directory
+
+
+
+-sudo alsamixer
+opens audio gui
+
+
+- git clone --single-branch --branch main parker-dev https://github.com/parke2023059/DoggoLake.git
 

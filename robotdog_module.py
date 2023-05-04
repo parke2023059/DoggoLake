@@ -23,7 +23,7 @@ class RobotDog:
 
         print(dir)
         mixer.music.set_volume(0.2)
-        mixer.music.load(dir + "/africa.mp3")
+        mixer.music.load(dir + "/audio(4).wav")
         mixer.music.play()
         time.sleep(60)
 
