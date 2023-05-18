@@ -6,6 +6,8 @@ import json
 import requests
 import time
 import dotenv,os
+import uberduck
+
 
 from pygame import mixer
 
@@ -86,14 +88,18 @@ class RobotDog:
         link = requests.get(url, allow_redirects=True)
 
         
-
-        while json.loads(link.content)["path"] == 'None':
-            print("File not ready. Waiting...")
-            print(thePath)
-            time.sleep(3)
+        
 
 
-        thePath = json.loads(link.content)["path"]
+
+
+        #while json.loads(link.content)["path"] == 'None':
+           # print("File not ready. Waiting...")
+          #  print(thePath)
+         #   time.sleep(3)
+
+
+        #thePath = json.loads(link.content)["path"]
 
         
 
@@ -101,12 +107,15 @@ class RobotDog:
         #download the content
 
 
+    def askQuestion3():
+        apiKey = openai.api_key
+        openai.api_key = os.getenv('apiKey')
+        client = uberduck.UberDuck(apiKey, )
 
 
 
 
-
-#RobotDog.startRecording()
+RobotDog.startRecording()
 #RobotDog.askQuestion()
 #RobotDog.askQuestion2()
-RobotDog.play_audio()
+#RobotDog.play_audio()
