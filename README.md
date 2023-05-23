@@ -1,6 +1,8 @@
 Doggo Lake Project
 
+
 Overview:
+
 Have the robot dog be able to receive input after hearing a keyword. (like an Alexa)
 Using Chat GPT, have the dog create a response.
 Have the dog speak Chat GPT's response
@@ -11,6 +13,7 @@ Main Goals:
 - Connect microphone into Chat GPT
 - Speak what Chat GPT responds with
 - secure all needed devices onto robot dog's back
+
 
 
 Fusion 360 Goals (juniors):
@@ -24,14 +27,18 @@ Fusion 360 Procedures:
 
 
 CMD Line Goals (seniors):
+
 - 
 CMD Line Procedures:
+
 
 
 Current:
 - Talon P.
 - Luke T.
 
+
 Former
+
 - Parker F.
 - Jayson Z.
