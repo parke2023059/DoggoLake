@@ -49,8 +49,6 @@ Current:
 - Talon P.
 - Luke T.
 
-
-Former
-
+Former:
 - Parker F.
 - Jayson Z.
