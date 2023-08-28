@@ -38,5 +38,6 @@ Current:
 - Talon P.
 - Luke T.
 
+Reired:
 - Parker F.
 - Jayson Z.
